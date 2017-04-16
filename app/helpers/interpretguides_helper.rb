@@ -1,0 +1,2 @@
+module InterpretguidesHelper
+end
