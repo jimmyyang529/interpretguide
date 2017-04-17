@@ -1,7 +1,6 @@
 class Admin::InterpretguidesController < ApplicationController
   before_action :authenticate
-  before_action :set_admin_post, only: [:show, :edit, :update, :destroy]
-  respond_to :html
+  # layout "admin"
 
 
   def index
@@ -11,7 +10,6 @@ class Admin::InterpretguidesController < ApplicationController
   end
 
   def new
-    @info = Info.new
     @case = Case.new
     @service = Service.new
   end

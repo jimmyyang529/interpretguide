@@ -12,6 +12,28 @@ Rails.application.configure do
   # Show full error reports.
   config.consider_all_requests_local = true
 
+  #Devise has to send “reset password” and “confirmation” (if unlocked) emails to users. We’ll set also to send welcome email after registration.
+
+  config.action_mailer.default_url_options = { host: '137.74.175.51', port: 3001 }
+
+  config.action_mailer.perform_caching = false
+
+  config.action_mailer.perform_deliveries = true
+
+  config.action_mailer.raise_delivery_errors = true
+
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = {
+    user_name:      Rails.application.secrets.mail_username,
+    password:       Rails.application.secrets.mail_password,
+    domain:         'gmail.com',
+    address:       'smtp.gmail.com',
+    port:          '587',
+    authentication: :plain,
+    enable_starttls_auto: true
+  }
+
   # Enable/disable caching. By default caching is disabled.
   if Rails.root.join('tmp/caching-dev.txt').exist?
     config.action_controller.perform_caching = true

@@ -1,33 +1,16 @@
 <h1>小編PO文管理系統</h1>
 <h4>東南亞資訊</h4>
+<%= link_to '新增東南亞資訊', new_admin_info_path, :class => "btn btn-default btn-sm" %>
+
 <table>
   <% @infos.each do |info| %>
   <tr>
     <td>
       <%= info.title %>
     </td>
+    <td>
+
+    </td>
   </tr>
   <% end %>
 </table> <br>
-
-<h4>合作案例</h4>
-<table>
-  <% @cases.each do |c| %>
-  <tr>
-    <td>
-      <%= c.title %>
-    </td>
-  </tr>
-  <% end %>
-</table>
-
-<h4>服務內容</h4>
-<table>
-  <% @services.each do |service| %>
-  <tr>
-    <td>
-      <%= service.title %>
-    </td>
-  </tr>
-  <% end %>
-</table>

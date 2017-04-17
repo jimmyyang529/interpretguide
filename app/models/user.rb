@@ -6,7 +6,12 @@ class User < ApplicationRecord
 
   has_many :cases
   has_many :services
-  has_many :infos       
+  has_many :infos
 
+
+  after_create :send_admin_mail
+  def send_admin_mail
+    UserMailer.send_welcome_email(self).deliver_later
+  end
 
 end

@@ -1,5 +1,6 @@
-<h3>東南亞商情</h3>
+<h2>東南亞商情</h2>
 <% @infos.each do |info| %>
-  <%= info.title %>
-  <%= info.content %>
+  <p><%= image_tag(info.img_url, :width => 600) %></p>
+  <h3><%= info.title %></h3>
+  <%= info.content %><br>
 <% end %>

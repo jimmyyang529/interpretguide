@@ -23,6 +23,18 @@ gem 'coffee-rails', '~> 4.2'
 
 #使用者認證user註冊登入
 gem 'devise'
+# flash login or not message alert
+gem 'toastr-rails'
+
+# 管理使用者user權限
+gem 'cancancan'
+
+gem 'remotipart', github: 'mshibuya/remotipart'
+gem 'rails_admin', '>= 1.0.0.rc'
+
+
+# 安裝bootstrap
+gem 'bootstrap-sass'
 
 
 
