@@ -1,4 +1,35 @@
-<h1>Interpret Guides in East-South Asia</h1>
-<%= link_to "東南亞資訊", info_interpretguides_path %>
-<%= link_to "合作案例", case_interpretguides_path %>
-<%= link_to "服務內容", service_interpretguides_path %>
+
+<header>
+	<div class="container clearfix">
+		<div id="logo">
+ 	   	<a href="#">
+ 	   	  <%= image_tag("logo.png", :width => 80) %>
+ 	   	</a>
+ 	  </div>
+		<nav>
+			<ul class="clearfix">
+			<li><a><%= link_to "首頁", info_interpretguides_path %></a></li>
+			<li><a><%= link_to "東南亞資訊", info_interpretguides_path %></a></li>
+			<li><a><%= link_to "關於我們", case_interpretguides_path %></a></li>
+			<li><a><%= link_to "服務內容", service_interpretguides_path %></a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<section class="banner">
+
+		<div  id="video-container" >
+				<%= video_tag(["business.mp4"], :autoplay => true, :loop => true) %>
+		</div>
+  	<div class="intro-text">
+  	   <h1>亞洲最值得信賴的專業經商口譯嚮導</h1>
+  	   <p>國際知名翻譯公司 -WritePath-合作夥伴為您提供可信賴的經商口譯嚮導，讓您放心南向拓展商業版圖</p>
+  	</div>
+
+
+</section>
+
+
+
+

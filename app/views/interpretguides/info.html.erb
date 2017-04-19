@@ -1,6 +1,13 @@
 <h2>東南亞商情</h2>
-<% @infos.each do |info| %>
-  <p><%= image_tag(info.img_url, :width => 600) %></p>
-  <h3><%= info.title %></h3>
-  <%= info.content %><br>
-<% end %>
+
+
+
+<div class="row clearfix">
+	<% @infos.each do |info| %>
+		<div class="col-sm-4">
+  		<p><%= image_tag(info.img_url, width: 300) %></p>
+  		<h3><%= info.title %></h3>
+  		<h5><%= info.content %></h5><br>
+  	</div>
+	<% end %>
+</div>
